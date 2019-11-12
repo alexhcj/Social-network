@@ -1,0 +1,16 @@
+.friends {
+    display: grid;
+    grid-template-columns: auto;
+    /* grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 1vw; */
+}
+.item {
+    display: inline-block;
+    margin: 30px;
+    max-width: 150px;
+	text-align: center;
+}
+.friendImg {
+	margin: 0 auto;
+	width: 80px;
+}

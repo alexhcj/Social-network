@@ -1,0 +1,19 @@
+.nav {
+    grid-area: n;
+    padding: 20px;
+    background-color: rgb(104, 152, 255);
+}
+.item {
+    padding: 3px 0;
+}
+.link {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.24s ease-out;
+}
+.link.active {
+    color: darkblue;
+}
+.link:hover {
+    color: coral;
+}

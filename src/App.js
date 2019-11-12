@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
+import Navbar from './components/Navbar/Navbar';
+import Profile from './components/Profile/Profile';
+import Dialogs from './components/Dialogs/Dialogs';
+import Header from './components/Header/Header';
+import Friends from './components/Friends/Friends';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = (props) => {
+	return (
+		<div className="app-wrapper">
+			<Header />
+			<Navbar />
+			<div className="app-wrapper-content">
+				<Route path="/profile" render={() => <Profile state={props.state.profilePage} addPost={props.addPost} />} />
+				<Route path="/friends" render={() => <Friends state={props.state.friendsPage} />} />
+				<Route path="/dialogs" render={() => <Dialogs state={props.state.dialogsPage} />} />
+				<Route path="/news" component={Profile} />
+				<Route path="/music" component={Profile} />
+				<Route path="/settings" component={Profile} />
+			</div>
+		</div>
+	);
+};
 
 export default App;
+
+/* 
+* TODO:
+* - Add friends block + state data
+* - Add textarea to write messages + display them + state data
+*/

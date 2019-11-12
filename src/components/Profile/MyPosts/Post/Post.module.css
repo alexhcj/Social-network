@@ -1,0 +1,67 @@
+.item {
+    position: relative;
+    margin-top: 10px;
+    color: rgb(2, 2, 2);
+}
+.item img {
+    width: 66px;
+    border-radius: 10%;
+}
+.message {
+    position: absolute;
+    top: 3px;
+    left: 74px;
+}
+.likeBlock {
+    position: relative;
+}
+.likesCount {
+    margin-left: 35px;
+    font-weight: bold;
+    color: blueviolet;
+    transition: opacity 0.15s ease-out;
+}
+.likesCount:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+.likesCount::before {
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 23px;
+    width: 10px;
+    height: 15px;
+    border-radius: 50px 50px 0 0;
+    background-color: blueviolet;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+}
+.likesCount::after {
+    position: absolute;
+    content: "";
+    top: -2px;
+    left: 17px;
+    width: 10px;
+    height: 15px;
+    background-color: blueviolet;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+}
