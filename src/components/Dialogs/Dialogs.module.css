@@ -1,13 +1,15 @@
-.dialogs {
+.dialogsBlock {
     display: grid;
+    grid-template-areas:
+        "mb ms"
+        "mb ms";
     grid-template-columns: 2fr 10fr;
 }
-.dialogsItems {
-    padding: 10px;
-}
-.messages {
-    padding: 10px;
+.membersBlock {
+    grid-area: mb;
+    padding: 20px;
 }
 .messagesBlock {
-    margin-top: 20px;
+    grid-area: ms;
+    padding: 20px;
 }

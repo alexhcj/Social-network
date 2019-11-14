@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './Friends.module.css';
-import FriendItem from './FriendItem/FriendItem';
+import Friend from './Friend/Friend';
 
 const Friends = (props) => {
 	let friendsElements = props.state.friends.map((friend) => (
-		<FriendItem name={friend.name} id={friend.id} url={friend.url} />
+		
+		<Friend name={friend.name} id={friend.id} url={friend.url} key={friend.id} />
 	));
-
 	return (
 		<div className={styles.friends}>
 			<div className={styles.friendsItem}>{friendsElements}</div>

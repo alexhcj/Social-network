@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
@@ -20,7 +20,7 @@ const App = (props) => {
 				<Route path="/friends" render={() => <Friends state={props.state.friendsPage} />} />
 				<Route
 					path="/dialogs"
-					render={() => <Dialogs store={props.store} />}
+					render={() => <Dialogs dialogsPage={props.state.dialogsPage} dispatch={props.dispatch} />}
 				/>
 				<Route path="/news" component={Profile} />
 				<Route path="/music" component={Profile} />

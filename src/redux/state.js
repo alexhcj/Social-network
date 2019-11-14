@@ -14,7 +14,7 @@ let store = {
             newPostText: "alex_hcj"
         },
         dialogsPage: {
-            dialogs: [
+            members: [
                 { id: 1, name: "Valera" },
                 { id: 2, name: "Galya" },
                 { id: 3, name: "Lexa" },
@@ -84,6 +84,7 @@ let store = {
 export const addPostActionCreator = () => ({ type: ADD_POST });
 export const updateNewPostTextActionCreator = (text) =>
     ({ type: UPDATE_NEW_POST_TEXT, newText: text });
+
 export const addMessageCreator = () => ({ type: ADD_MESSAGE });
 export const updateNewMessageTextCreator = (message) =>
     ({ type: UPDATE_NEW_MESSAGE_TEXT, newText: message });
