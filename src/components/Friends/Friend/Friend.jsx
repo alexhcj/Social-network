@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../Friends.module.css';
+import styles from './Friend.module.css';
 import { NavLink } from 'react-router-dom';
 
 const FriendItem = (props) => {
