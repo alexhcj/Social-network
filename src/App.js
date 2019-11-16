@@ -28,9 +28,3 @@ const App = (props) => {
 };
 
 export default App;
-
-/* 
-* TODO:
-* - Add friends block + state data
-* - Add textarea to write messages + display them + state data
-*/
