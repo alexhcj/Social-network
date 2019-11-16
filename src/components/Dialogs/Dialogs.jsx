@@ -5,18 +5,22 @@ import Message from './Message/Message';
 import { updateNewMessageTextCreator, addMessageCreator } from '../../redux/dialogsReducer';
 
 const Dialogs = (props) => {
-	let state = props.store.getState().dialogsPage;
-	let dialogsElements = state.dialogs.map((dialog) => <DialogItem name={dialog.name} id={dialog.id} key={dialog.id} />);
-	let messagesElements = state.messages.map((message) => <Message message={message.message} id={message.id} key={message.id} />);
+	let state = props.dialogsPage;
+
+	let dialogsElements = state.dialogs.map((dialog) => (
+		<DialogItem name={dialog.name} id={dialog.id} key={dialog.id} />
+	));
+	let messagesElements = state.messages.map((message) => (
+		<Message message={message.message} id={message.id} key={message.id} />
+	));
 	let newMessageText = state.newMessageText;
 
 	let onMessageClick = () => {
-		props.store.dispatch(addMessageCreator());
+		props.sendMessage();
 	};
 
-	let onMessageChange = (e) => {
-		let message = e.target.value;
-		props.store.dispatch(updateNewMessageTextCreator(message));
+	let onMessageChange = (message) => {
+		props.updateNewMessageText(message);
 	};
 
 	return (
