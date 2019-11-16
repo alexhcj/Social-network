@@ -1,0 +1,13 @@
+.link {
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+    transition: color 0.24s ease-out;
+}
+.link.active {
+    font-weight: bold;
+    color: seagreen;
+}
+.link:hover {
+    color: coral;
+}

@@ -13,7 +13,7 @@ let store = {
             newPostText: "alex_hcj"
         },
         dialogsPage: {
-            dialogs: [
+            members: [
                 { id: 1, name: "Valera" },
                 { id: 2, name: "Galya" },
                 { id: 3, name: "Lexa" },
